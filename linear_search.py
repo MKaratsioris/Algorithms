@@ -5,8 +5,26 @@ from definitions import Iterables, Simple
 @timeit
 def linear_search(iterable: Iterables, target: Simple) -> tuple[Simple, int] | None:
     """
-    By using the linear search method, it returns the index position
-    of the target if found, else returns None.
+    Linear Search Algorithm
+    -----------------------
+    The input is an iterable collection of elements. If the element you are looking for is in that iterable, 
+    the algorithm  will return its index. Otherwise, the algorithm will return None.
+
+    Time Complexity:    O(N)
+    Space Complexity:   O(1)
+
+    Parameters
+    ----------
+    iterable : list | tuple | set
+        Collection of data
+    target : int | float | complex | str | bytes
+        Data to be found in the iterable
+
+    Returns
+    -------
+    tuple[int | float | complex | str | bytes, int] | None
+        A tuple with the position of the item in the iterable - or None if not found, as well as the 
+        number of steps it took to conclude the search
     """
     steps: int = 0
     for index in range(len(iterable)):
